@@ -2,8 +2,13 @@ from gametasks import *
 from gameclasses import *
 
 try:
-    math_instructions = 'В этой игре вам предлагается решить простую арифметическую задачу.\nЗа каждый правильный ответ вам начисляется одно очко.\nЗа ошибочные ответы очки не вычитаются.'
-    binary_instructions = 'В этой игре вы получаете десятичное число.\nВаша задача — преобразовать его в двоичную систему счисления.\nЗа каждый правильный ответ вам начисляется одно очко.\nЗа ошибочные ответы очки не вычитаются.'
+    math_instructions = 'В этой игре вам предлагается решить простую арифметическую задачу.\n' \
+                        'За каждый правильный ответ вам начисляется одно очко.\n' \
+                        'За ошибочные ответы очки не вычитаются.'
+    binary_instructions = 'В этой игре вы получаете десятичное число.\n' \
+                          'Ваша задача — преобразовать его в двоичную систему счисления.\n' \
+                          'За каждый правильный ответ вам начисляется одно очко.\n' \
+                          'За ошибочные ответы очки не вычитаются.'
     bg = Binary()
     mg = MathGame()
     user_name = input('Enter your name: ')
@@ -41,7 +46,8 @@ try:
             print_instructions(binary_instructions)
             current_score = bg.generate_questions()
             score += current_score
-        user_choice = input(f'Your new total score is {score}.\nPush Enter button to play more or enter "-1" to exit the game: ')
+        user_choice = input(f'Your new total score is {score}.\n'
+                            f'Push Enter button to play more or enter "-1" to exit the game: ')
 
     update_user_score(is_new_user, user_name, str(score))
 

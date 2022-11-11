@@ -47,7 +47,7 @@ def update_user_score(is_new_user, user_name, score):
     temp_path = '/Users/anastasia/PycharmProjects/Math_project/user_scores.tmp'
     if is_new_user:
         file = open(old_path, 'a')
-        file.write(f'\n{user_name}, {score}')
+        file.write(f'{user_name}, {score}\n')
         file.close()
     else:
         temp_file = open(temp_path, 'w')

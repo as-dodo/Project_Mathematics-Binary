@@ -43,7 +43,7 @@ class Binary(Game):
                         score += 1
                         break
                     else:
-                        print(f'Wrong answer. The correct answer is {base10}')
+                        print(f'Wrong answer. The correct answer is {base10:b}')
                         break
                 except:
                     print('There\'s been a mistake. Please enter a binary.')
@@ -87,7 +87,7 @@ class MathGame(Game):
             #     number_list[2]) + symbol_list[2] + str(number_list[3]) + symbol_list[3] + str(number_list[4])
             result = eval(question_string)
             question_string = question_string.replace('**', '^')
-            user_result = input(f'Сalculate the value of the expression {question_string} ')
+            user_result = input(f'Сalculate the value of the expression {question_string} = ')
 
             while True:
                 try:
